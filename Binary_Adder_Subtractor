@@ -1,0 +1,31 @@
+// 4 BIT BINARY ADDER
+
+module BINARYADD(A,B,C);
+input[3:0]A,B;
+output[3:0]C;
+assign C=A+B;
+endmodule
+
+//4 BIT BINARY SUBTRACTOR
+
+module BINARYADD(A,B,C);
+input[3:0]A,B;
+output[3:0]C;
+assign C=A-B;
+endmodule
+
+
+//4 BIT ADDER/SUBTRACTOR
+
+module Add_Sub(a, b, m, c);
+input [3:0] a, b;
+input m;
+output reg [4:0] c;
+always @(a, b, m)
+begin
+ if(m == 0)
+ c = a + b;
+ else
+ c = a - b;
+end
+endmodule
